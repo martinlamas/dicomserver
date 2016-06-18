@@ -108,7 +108,7 @@ public class DicomServer {
 			showBanner();
 			
 			IDicomStoreSCPServer server = new DicomStoreSCPServer(port,
-					storageDirectory, applicationEntities);
+					applicationEntities);
 			server.start();
 		} catch(ParseException e) {
 			printUsage();

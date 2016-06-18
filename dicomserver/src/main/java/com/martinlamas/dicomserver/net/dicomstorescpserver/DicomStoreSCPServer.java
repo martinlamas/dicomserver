@@ -55,7 +55,7 @@ public class DicomStoreSCPServer implements IDicomStoreSCPServer {
 				TransferCapability.Role.SCP, "*"));
 	}
 	
-	public DicomStoreSCPServer(int port, File storageDirectory,
+	public DicomStoreSCPServer(int port,
 			List<DicomServerApplicationEntity> applicationEntities) {
 		connection = new Connection();
 		connection.setPort(port);
@@ -81,7 +81,7 @@ public class DicomStoreSCPServer implements IDicomStoreSCPServer {
 	public DicomStoreSCPServer(int port, File storageDirectory,
 			List<DicomServerApplicationEntity> applicationEntities,
 			List<StoreSCPListener> storeSCPListeners) {
-		this(port, storageDirectory, applicationEntities);
+		this(port, applicationEntities);
 		
 		for(StoreSCPListener storeSCPListener: storeSCPListeners)
 			storeSCP.addStoreSCPListener(storeSCPListener);
