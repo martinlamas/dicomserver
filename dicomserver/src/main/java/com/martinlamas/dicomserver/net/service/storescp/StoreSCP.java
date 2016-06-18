@@ -126,6 +126,6 @@ public class StoreSCP extends BasicCStoreSCP {
 		}
 		
 		for(StoreSCPListener storeSCPListener: storeSCPListeners)
-			storeSCPListener.onInstanceReceived(iuid, instanceFile);
+			storeSCPListener.onInstanceReceived(as, iuid, instanceFile);
 	}
 }

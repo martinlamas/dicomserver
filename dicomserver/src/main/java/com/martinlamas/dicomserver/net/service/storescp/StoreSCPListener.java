@@ -31,5 +31,6 @@ import org.dcm4che3.net.Association;
 
 public interface StoreSCPListener {
 	public void onCloseAssociation(Association association);
-	public void onInstanceReceived(String iuid, File instanceFile);
+	public void onInstanceReceived(Association association,
+			String iuid, File instanceFile);
 }
