@@ -88,6 +88,11 @@ public class DicomStoreSCPServer implements IDicomStoreSCPServer {
 	}
 	
 	@Override
+	public void addStoreSCPListener(StoreSCPListener storeSCPListener) {
+		storeSCP.addStoreSCPListener(storeSCPListener);
+	}
+	
+	@Override
 	public void start() throws GeneralSecurityException, IOException {
 		ExecutorService executorService = Executors.newCachedThreadPool();
 		ScheduledExecutorService scheduledExecutorService =
