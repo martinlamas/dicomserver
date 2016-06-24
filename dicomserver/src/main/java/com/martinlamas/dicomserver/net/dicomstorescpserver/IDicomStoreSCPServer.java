@@ -28,6 +28,9 @@ package com.martinlamas.dicomserver.net.dicomstorescpserver;
 import java.io.IOException;
 import java.security.GeneralSecurityException;
 
+import com.martinlamas.dicomserver.net.service.storescp.StoreSCPListener;
+
 public interface IDicomStoreSCPServer {
+	public void addStoreSCPListener(StoreSCPListener storeSCPListener);
 	public void start() throws GeneralSecurityException, IOException;
 }
