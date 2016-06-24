@@ -62,7 +62,7 @@ public class DicomStoreSCPServer implements IDicomStoreSCPServer {
 		
 		device = new Device("proxy");
 		
-		StoreSCP storeSCP = new StoreSCP();
+		storeSCP = new StoreSCP();
 		
 		DicomServiceRegistry serviceRegistry = new DicomServiceRegistry();
 		serviceRegistry.addDicomService(storeSCP);
